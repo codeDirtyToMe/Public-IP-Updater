@@ -107,8 +107,8 @@ def main() :
     newIP = wimip()  # Web Scraper for public IP
 
     #Test to see if this program has run before.
-    if os.path.exists("/.currentIPvalue.txt") :
-        openFileText = open(".currentIPValue.txt")
+    if os.path.isfile(os.getcwd() + "/.currentIPvalue.txt") :
+        openFileText = open(".currentIPvalue.txt")
         ipOnStorage = openFileText.read() #Assign value from currentIPvalue.txt to storage variable.
         openFileText.close() #Close it out.
 
